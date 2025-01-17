@@ -25,22 +25,32 @@ public class QuestionPickUp : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        inTrigger = true;
+        // Only trigger if the player is in range
+        if (other.CompareTag("player"))
+        {
+            inTrigger = true;
+        }
     }
 
     void OnTriggerExit(Collider other)
     {
-        inTrigger = false;
+        // Only stop triggering if the player leaves the range
+        if (other.CompareTag("player"))
+        {
+            inTrigger = false;
+        }
     }
 
     void Update()
     {
-        if (hasRun == false){
+        if (hasRun == false)
+        {
             isShowing = false;
             menu.SetActive(isShowing);
             hasRun = true;
         }
-        else{
+        else
+        {
             if (inTrigger)
             {
                 if (Input.GetKeyDown(KeyCode.F))

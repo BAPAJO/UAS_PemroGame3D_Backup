@@ -6,7 +6,7 @@ using TMPro;
 public class QuestionProgress : MonoBehaviour
 {
     public TextMeshProUGUI progressText; // Reference to progress text
-    private int soalBenar = 0; // Number of correct answers
+    private int soalBenar = 9; // Number of correct answers
     private int totalSoal = 10; // Total questions
     private bool notifTampil = false; // Notification status
     public GameObject notifGate; // UI notification object
