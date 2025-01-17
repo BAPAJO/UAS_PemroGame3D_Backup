@@ -11,11 +11,12 @@ public class PauseMennu : MonoBehaviour
 
     void Update()
     {
-        Debug.Log("Escape pressed");
+        
         if (Input.GetKeyDown(KeyCode.Escape))
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
         {
+            Debug.Log("Escape pressed");
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
             if (GameIsPaused)
             {
                 Resume();
